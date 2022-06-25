@@ -1,0 +1,17 @@
+{
+  "name": "treblefivedesign.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "python -m http.server 8111",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-treblefivedesign:treblefivedesign/treblefivedesign.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
