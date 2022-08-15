@@ -1,19 +1,156 @@
-@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
-html, body {
+@import url('https://fonts.googleapis.com/css2?family=Staatliches');
+html, body, page {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: sans-serif;
-  color: white;
+  color: #fff;
+  min-height: 100%;
 }
 html {
-  background: #555 url(images/background_subd.png);
+  background: #555 url(images/4.png);
   background-attachment: fixed;
   background-position: center;
-  background-size: cover;
 }
 h1 {
   font-family: 'Staatliches', cursive;
+  text-shadow: 0px 1px 2px #000;
+}
+header {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header img {
+  max-width: 80vw;
+  max-height: 60vh;
+  transition: .3s;
+}
+.page-creators header img {
+  max-width: 10em;
+}
+header h3 {
+  max-width: 70vw;
+  background: black;
+  padding: 1em;
+  text-align: justify-all;
+}
+menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+menu menu-item {
+  background: black;
+  min-width: 10em;
+  text-align: center;
+  margin: 1em;
+  position: relative;
+}
+menu menu-item:before {
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: transparent;
+  z-index: 3;
+  content: '';
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  border-top: 1em solid hsl(240, 100%, 71%);
+  border-right: 1em solid transparent;
+}
+menu menu-item:nth-of-type(0):before {
+  filter: hue-rotate(0deg);
+}
+menu menu-item:nth-of-type(1):before {
+  filter: hue-rotate(30deg);
+}
+menu menu-item:nth-of-type(2):before {
+  filter: hue-rotate(60deg);
+}
+menu menu-item:nth-of-type(3):before {
+  filter: hue-rotate(90deg);
+}
+menu menu-item a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 3em;
+  font-family: 'Staatliches', impact, sans-serif;
+}
+menu menu-item a:hover {
+  
+}
+page {
+  padding: 2em;
+  box-sizing: border-box;
+  margin-top: 1em;
+  background: rgba(255,255,255,0.8);
+}
+content {
+  flex: 2;
+  width: calc(100vw - 4em);
+  max-width: 70em;
+}
+content index {
+  display: grid;
+  grid-template-areas:
+    "one one two"
+    "one one three"
+    "four five five"
+    "six seven eight";
+  grid-gap: 1.3em;
+}
+content index item {
+  background: #555 url(images/background_subd.png);
+  background-position: center;
+  background-size: cover;
+  border: 2px solid white;
+  display: flex;
+}
+content index item::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 0;
+  padding-bottom: 66%;
+}
+content index item:nth-of-type(1) {
+  grid-area: one;
+}
+content index item:nth-of-type(2) {
+  grid-area: two;
+}
+content index item:nth-of-type(3) {
+  grid-area: three;
+}
+content index item:nth-of-type(4) {
+  grid-area: four;
+}
+content index item:nth-of-type(5) {
+  grid-area: five;
+}
+content index item:nth-of-type(5)::before {
+  padding-bottom: 33%;
+}
+content index item:nth-of-type(6) {
+  grid-area: six;
+}
+content index item:nth-of-type(7) {
+  grid-area: seven;
+}
+content index item:nth-of-type(8) {
+  grid-area: eight;
+}
+footer {
+  flex: 0;
+  padding: 1.3em;
 }
