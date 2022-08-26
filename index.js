@@ -100,7 +100,7 @@ window.app = TurboMini();
   };
   const start = async () => {
     audio = audio || new AudioContext();
-    osc = await Osc2Lfo(audio, 'export/quietstreamwith-pretheta.wav', 3.36, .5, .2, .3, .5, .3);
+    osc = await Osc2Lfo(audio, 'export/railloop1.ogg', 3.36, .5, .2, .3, .5, .3);
     //osc2 = await Osc2Lfo(audio, 'export/blue32.wav', 3.4, .2, 0, 0.1, 1, .5);
     mainGain = audio.createGain();
     mainGain.gain.value = 0.6;
